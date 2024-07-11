@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organization Members</title>
+    <link rel="stylesheet" href="Hr.css">
+    <link rel="stylesheet" href="../components/Topbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="topbar-placeholder"></div>
+
+    <div class="content-container">
+        <h2>인사페이지다.</h2>
+
+        <div class="tab-menu">
+            <button class="tab-button active" data-tab="members">구성원</button>
+            <button class="tab-button" data-tab="hr">인사・계약</button>
+        </div>
+        <div class="main-content">
+            <div class="tab-content active" data-tab="members">
+                <div class="left-panel">
+                    <ul class="team-list">
+                        <li><i class="fas fa-user-tie"></i> 대표</li>
+                        <li><i class="fas fa-users"></i> 인사팀</li>
+                        <li><i class="fas fa-calculator"></i> 회계팀</li>
+                        <li><i class="fas fa-code"></i> 개발팀</li>
+                        <li><i class="fas fa-bullhorn"></i> 마케팅팀</li>
+                        <li><i class="fas fa-paint-brush"></i> 디자인팀</li>
+                    </ul>
+                </div>
+                <div class="right-panel">
+                    <div class="search-bar">
+                        <input type="text" placeholder="이름, 조직을 검색해보세요.">
+                    </div>
+                    <div class="members-list">
+                        <ul>
+                            <li><img src="profile.png" alt="profile" class="profile-img"> 박진오 <span class="department">회계팀</span></li>
+                            <li><img src="profile.png" alt="profile" class="profile-img"> 이승백 <span class="department">회계팀</span></li>
+                            <li><img src="profile.png" alt="profile" class="profile-img"> 이종하 <span class="department">마케팅팀</span></li>
+                            <li><img src="profile.png" alt="profile" class="profile-img"> 송환님 <span class="department">디자인팀</span></li>
+                            <li><img src="profile.png" alt="profile" class="profile-img"> 김승욱 <span class="department">디자인팀</span></li>
+                            <li><img src="profile.png" alt="profile" class="profile-img"> 박보연 <span class="department">인사팀</span></li>
+                            <li><img src="profile.png" alt="profile" class="profile-img"> 홍진영 <span class="department">개발팀</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" data-tab="hr">
+                <h3>어떤 정보를 변경하고 싶으세요?</h3>
+                <div class="hr-actions">
+                    <div class="action-card" onclick="location.href='NewEmployForm.html'">
+                        <i class="fas fa-user-plus"></i>
+                        <p>인사정보 입력</p>
+                    </div>
+                    <div class="action-card" onclick="location.href='UpdateEmployForm.html'"></div>>
+                        <i class="fas fa-user-edit"></i>
+                        <p>인사정보 변경</p>
+                    </div>
+                    <div class="action-card">
+                        <i class="fas fa-file-contract"></i>
+                        <p>계약정보 변경</p>
+                    </div>
+                    <div class="action-card">
+                        <i class="fas fa-business-time"></i>
+                        <p>근무유형 변경</p>
+                    </div>
+                </div>
+                <h3>변경・계약 진행현황은?</h3>
+                <div class="change-status">
+                    <div class="change-item">
+                        <i class="fas fa-check-circle"></i>
+                        <p>작성자</p>
+                        <span>2021. 00. 00 오후 00:00</span>
+                        <p class="description">변경한 내용 입력</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Home.js"></script>
+    <script src="Hr.js"></script>
+</body>
+</html>

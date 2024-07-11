@@ -20,12 +20,10 @@
           <button class="tab-button active" onclick="openTab(event, 'notice')">공지사항</button>
           <button class="tab-button" onclick="openTab(event, 'task')">할 일</button>
         </div>
-
         <div id="notice" class="tab-content">
           <h3>공지사항 표시</h3>
           <p>공지사항 내용...</p>
         </div>
-
         <div id="task" class="tab-content" style="display:none">
           <div class="task-container">
             <i class="fas fa-user-circle"></i>
@@ -54,35 +52,10 @@
           <button class="logout-button">지금 퇴근하기</button>
         </div>
       </div>
+
     </div>
   </div>
 
-  <script>
-    async function fetchHtmlAsText(url) {
-      return await (await fetch(url)).text();
-    }
-
-    async function importPage(target) {
-      document.querySelector('#' + target).innerHTML = await fetchHtmlAsText(target + '.html');
-    }
-
-    function openTab(evt, tabName) {
-      var i, tabcontent, tabbuttons;
-      tabcontent = document.getElementsByClassName("tab-content");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tabbuttons = document.getElementsByClassName("tab-button");
-      for (i = 0; i < tabbuttons.length; i++) {
-        tabbuttons[i].className = tabbuttons[i].className.replace(" active", "");
-      }
-      document.getElementById(tabName).style.display = "block";
-      evt.currentTarget.className += " active";
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      importPage('topbar-placeholder');
-    });
-  </script>
+  <script src="Home.js"></script>
 </body>
 </html>
